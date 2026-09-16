@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ox Browser</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="tab-bar">
+    <div id="tabs"></div>
+    <button id="new-tab-btn" title="New tab">+</button>
+  </div>
+
+  <div id="toolbar">
+    <button id="back-btn" title="Back">&#8592;</button>
+    <button id="forward-btn" title="Forward">&#8594;</button>
+    <button id="reload-btn" title="Reload">&#8635;</button>
+    <input id="url-bar" type="text" placeholder="Search or enter website address" spellcheck="false" />
+    <button id="go-btn" title="Go">Go</button>
+    <button id="bookmark-btn" title="Bookmark this page">&#9734;</button>
+    <button id="bookmarks-btn" title="Bookmarks">&#9776;</button>
+  </div>
+
+  <div id="bookmarks-panel" class="hidden">
+    <div id="bookmarks-header">Bookmarks</div>
+    <div id="bookmarks-list"></div>
+  </div>
+
+  <div id="webview-container"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

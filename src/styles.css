@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #202124;
+  color: #e8eaed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#tab-bar {
+  display: flex;
+  align-items: center;
+  background: #171717;
+  padding: 6px 6px 0 6px;
+  -webkit-app-region: drag;
+}
+
+#tabs {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  -webkit-app-region: no-drag;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 200px;
+  min-width: 120px;
+  padding: 8px 10px;
+  margin-right: 4px;
+  background: #2b2b2b;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b0b0b0;
+}
+
+.tab.active {
+  background: #202124;
+  color: #ffffff;
+}
+
+.tab .tab-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab .tab-close {
+  opacity: 0.6;
+  padding: 0 2px;
+}
+
+.tab .tab-close:hover {
+  opacity: 1;
+}
+
+#new-tab-btn {
+  -webkit-app-region: no-drag;
+  background: transparent;
+  border: none;
+  color: #b0b0b0;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+#new-tab-btn:hover {
+  color: #ffffff;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #202124;
+  padding: 8px;
+  border-bottom: 1px solid #333;
+}
+
+#toolbar button {
+  background: #2b2b2b;
+  border: none;
+  color: #e8eaed;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#toolbar button:hover {
+  background: #3a3a3a;
+}
+
+#url-bar {
+  flex: 1;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid #444;
+  background: #2b2b2b;
+  color: #ffffff;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+#url-bar:focus {
+  border-color: #8ab4f8;
+}
+
+#go-btn {
+  width: auto !important;
+  padding: 0 14px !important;
+}
+
+#bookmarks-panel {
+  position: absolute;
+  top: 90px;
+  right: 8px;
+  width: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+#bookmarks-panel.hidden {
+  display: none;
+}
+
+#bookmarks-header {
+  padding: 10px 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #444;
+}
+
+#bookmarks-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookmark-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.bookmark-item:hover {
+  background: #3a3a3a;
+}
+
+.bookmark-remove {
+  opacity: 0.5;
+  padding: 0 4px;
+}
+
+.bookmark-remove:hover {
+  opacity: 1;
+}
+
+#webview-container {
+  flex: 1;
+  position: relative;
+}
+
+#webview-container webview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#webview-container webview.active {
+  display: flex;
+}
