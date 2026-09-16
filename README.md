@@ -1,6 +1,15 @@
 # Ox Browser (Desktop)
 
-A simple desktop web browser built with Electron (uses the same Chromium engine as Google Chrome). Tabs, address bar, back/forward, bookmarks.
+A simple desktop web browser built with Electron (uses the same Chromium engine as Google Chrome). Tabs, address bar, back/forward, bookmarks, browsing history, private/incognito tabs, a downloads manager, and a settings screen (homepage + default search engine + light/dark/system theme).
+
+## Features
+
+- **Tabs** — open multiple tabs, switch and close them
+- **Private tabs** (🕵 button) — each gets its own non-persistent, in-memory browsing session (separate cookies/storage that vanish when the tab closes); pages visited in them are never added to history
+- **History** — every visited page (non-private) is logged to disk; click an entry to reopen it, or clear it all — from the ☰ menu
+- **Downloads** — any file a webview downloads is saved straight to your OS Downloads folder and logged in the in-app Downloads panel, live-updating as it completes
+- **Bookmarks** — star any page, browse them from the ☰ menu
+- **Settings** — set a custom homepage, pick a default search engine (Google/Bing/DuckDuckGo), and choose Light/Dark/Follow system theme
 
 ## Run locally
 

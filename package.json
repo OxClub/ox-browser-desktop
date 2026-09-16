@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "A simple, fast desktop web browser built with Electron.",
   "main": "src/main.js",
-  "author": "Ox Browser",
+  "author": "Ox Browser <team@oxbrowser.app>",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
@@ -29,11 +29,11 @@
     ],
     "win": {
       "target": ["nsis"],
-      "icon": "build/icon.ico"
+      "icon": "build/icon.png"
     },
     "mac": {
       "target": ["dmg"],
-      "icon": "build/icon.icns",
+      "icon": "build/icon.png",
       "category": "public.app-category.productivity"
     },
     "linux": {

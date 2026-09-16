@@ -9,6 +9,7 @@
   <div id="tab-bar">
     <div id="tabs"></div>
     <button id="new-tab-btn" title="New tab">+</button>
+    <button id="new-private-tab-btn" title="New private tab">&#128373;</button>
   </div>
 
   <div id="toolbar">
@@ -18,12 +19,60 @@
     <input id="url-bar" type="text" placeholder="Search or enter website address" spellcheck="false" />
     <button id="go-btn" title="Go">Go</button>
     <button id="bookmark-btn" title="Bookmark this page">&#9734;</button>
-    <button id="bookmarks-btn" title="Bookmarks">&#9776;</button>
+    <button id="menu-btn" title="Menu">&#9776;</button>
   </div>
 
-  <div id="bookmarks-panel" class="hidden">
-    <div id="bookmarks-header">Bookmarks</div>
-    <div id="bookmarks-list"></div>
+  <div id="menu-panel" class="panel hidden">
+    <div class="panel-item" id="menu-bookmarks">Bookmarks</div>
+    <div class="panel-item" id="menu-history">History</div>
+    <div class="panel-item" id="menu-downloads">Downloads</div>
+    <div class="panel-item" id="menu-settings">Settings</div>
+  </div>
+
+  <div id="bookmarks-panel" class="panel hidden">
+    <div class="panel-header">Bookmarks</div>
+    <div id="bookmarks-list" class="panel-list"></div>
+  </div>
+
+  <div id="history-panel" class="panel hidden">
+    <div class="panel-header">
+      History
+      <button id="clear-history-btn" class="panel-header-btn">Clear</button>
+    </div>
+    <div id="history-list" class="panel-list"></div>
+  </div>
+
+  <div id="downloads-panel" class="panel hidden">
+    <div class="panel-header">Downloads</div>
+    <div id="downloads-list" class="panel-list"></div>
+  </div>
+
+  <div id="settings-overlay" class="overlay hidden">
+    <div id="settings-modal">
+      <div class="panel-header">Settings</div>
+
+      <label class="settings-label">Homepage</label>
+      <input id="settings-homepage" type="text" placeholder="https://www.google.com" />
+
+      <label class="settings-label">Default search engine</label>
+      <select id="settings-search-engine">
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+        <option value="duckduckgo">DuckDuckGo</option>
+      </select>
+
+      <label class="settings-label">Theme</label>
+      <select id="settings-theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="system">Follow system</option>
+      </select>
+
+      <div class="settings-actions">
+        <button id="settings-cancel-btn">Cancel</button>
+        <button id="settings-save-btn" class="primary">Save</button>
+      </div>
+    </div>
   </div>
 
   <div id="webview-container"></div>
